@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings><!--这里面可以配置很多参数-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/><!--打印日志-->
+    </settings>
+
+    <!--被spring整合了,用处不大了-->
+
+    <!--实体类所在的包名  起别名的-->
+    <typeAliases>
+        <package name="com.bjpowernode.crm.model"/>
+    </typeAliases>
+
+    <!-- sql mapper(sql映射文件)的位置-->
+    <!--mapper包中的xml文件能一次加载进去
+        mapper文件和接口必须在同一目录下,并且名字一样
+    -->
+    <mappers>
+        <package name="com.bjpowernode.crm.mapper"/>
+    </mappers>
+</configuration>
